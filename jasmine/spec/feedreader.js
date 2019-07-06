@@ -26,7 +26,7 @@ $(function() {
     describe('The menu', () => {
         //Test of hideen by default
         it('hidden by default', () => {
-            expect($('body').attr('class')).toBe('menu-hidden');
+            expect($('body').hasClass('menu-hidden')).toBe(true);
         });
         //Test of toggle or not whene clicked
         it('changes visibility when clicked', () => {
@@ -45,7 +45,7 @@ $(function() {
           });
           //Test the if loadFeed load the feed or not
           it('complete', () => {
-              expect($('div.feed').children().length).not.toBe(0);
+              expect($('div.feed').children().length).toBeGreaterThan(1);
           });
     });
     //Test the New Feed Selection
