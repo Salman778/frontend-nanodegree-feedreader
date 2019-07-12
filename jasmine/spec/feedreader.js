@@ -31,9 +31,9 @@ $(function() {
         //Test of toggle or not whene clicked
         it('changes visibility when clicked', () => {
             $('.menu-icon-link').click();
-            expect($('body').attr('class')).toBe('');
+            expect($('body').hasClass('menu-hidden')).toBe(false);
             $('.menu-icon-link').click();
-            expect($('body').attr('class')).toBe('menu-hidden');
+            expect($('body').hasClass('menu-hidden')).toBe(true);
         });
 
     });
