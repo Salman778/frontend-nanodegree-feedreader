@@ -45,7 +45,7 @@ $(function() {
           });
           //Test the if loadFeed load the feed or not
           it('complete', () => {
-              expect($('div.feed').children().length).toBeGreaterThan(1);
+            expect($('.feed').has('.entry').length).not.toBe(0);
           });
     });
     //Test the New Feed Selection
